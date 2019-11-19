@@ -1,0 +1,41 @@
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Symbiot.PC.exe
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Symbiot.PC.pdb
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.csproj.CoreCompileInputs.cache
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.csproj.CopyComplete
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.exe
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.pdb
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Symbiot.Portable.dll
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Symbiot.Portable.pdb
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.csprojAssemblyReference.cache
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Symbiot.PC.exe
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Symbiot.PC.pdb
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Symbiot.Portable.dll
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Symbiot.Portable.pdb
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.csprojAssemblyReference.cache
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.csproj.CopyComplete
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.exe
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.pdb

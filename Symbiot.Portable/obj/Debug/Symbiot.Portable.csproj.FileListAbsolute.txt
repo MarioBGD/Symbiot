@@ -1,0 +1,9 @@
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.Portable\bin\Debug\Symbiot.Portable.dll
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.Portable\bin\Debug\Symbiot.Portable.pdb
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.Portable\obj\Debug\Symbiot.Portable.csprojAssemblyReference.cache
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.Portable\obj\Debug\Symbiot.Portable.csproj.CoreCompileInputs.cache
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.Portable\obj\Debug\Symbiot.Portable.dll
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.Portable\obj\Debug\Symbiot.Portable.pdb
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.Portable\bin\Debug\MonoGame.Framework.dll
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.Portable\bin\Debug\MonoGame.Framework.xml
+E:\Visual Studio\Projects 2017\Symbiot\Symbiot\Symbiot.Portable\obj\Debug\Symbiot.Portable.csproj.CopyComplete
