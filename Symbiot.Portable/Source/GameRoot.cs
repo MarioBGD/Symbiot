@@ -1,6 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
+
+using MGCore.UI;
+using Symbiot.Portable.Source.Controllers;
 
 namespace Symbiot.Portable.Source
 {
@@ -9,11 +13,23 @@ namespace Symbiot.Portable.Source
     /// </summary>
     public class GameRoot : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
-        
+        public static GameRoot Instance;
+
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+
+        private UIManager uiManager;
+        private GameController gameController;
+
+        public delegate void Delegate_OnDraw(SpriteBatch spriteBatch);
+        public delegate void Delegate_OnUpdate(GameTime gameTime);
+
+        public Delegate_OnDraw OnDraw;
+        public Delegate_OnUpdate OnUpdate;
+
         public GameRoot()
         {
+            Instance = this;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
@@ -26,7 +42,8 @@ namespace Symbiot.Portable.Source
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            uiManager = new UIManager();
+            gameController = new GameController();
 
             base.Initialize();
         }
@@ -49,7 +66,7 @@ namespace Symbiot.Portable.Source
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            Content.Unload();
         }
 
         /// <summary>
@@ -62,7 +79,7 @@ namespace Symbiot.Portable.Source
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            OnUpdate(gameTime)
 
             base.Update(gameTime);
         }
@@ -75,7 +92,10 @@ namespace Symbiot.Portable.Source
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            OnDraw(spriteBatch);
+            uiManager.OnDraw(spriteBatch);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
