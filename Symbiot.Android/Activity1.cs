@@ -19,7 +19,7 @@ namespace Symbiot.Android
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            var g = new GameRoot();
+            var g = new GameRoot(GameRoot.Platform.Android);
             SetContentView((View)g.Services.GetService(typeof(View)));
             g.Run();
         }

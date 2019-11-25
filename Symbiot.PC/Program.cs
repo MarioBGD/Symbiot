@@ -14,7 +14,7 @@ namespace Symbiot.PC
         [STAThread]
         static void Main()
         {
-            using (var game = new GameRoot())
+            using (var game = new GameRoot(GameRoot.Platform.PC))
                 game.Run();
         }
     }

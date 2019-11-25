@@ -12,7 +12,7 @@ namespace Symbiot.IOS
 
         internal static void RunGame()
         {
-            game = new GameRoot();
+            game = new GameRoot(GameRoot.Platform.IOS);
             game.Run();
         }
 

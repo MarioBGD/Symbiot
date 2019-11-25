@@ -15,23 +15,32 @@ namespace Symbiot.Portable.Source
     {
         public static GameRoot Instance;
 
+        public enum Platform
+        { PC, Android, IOS }
+        public static Platform CurrentPlatform { get; private set; }
+
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
 
+        private InputController inputController;
         private UIManager uiManager;
         private GameController gameController;
 
         public delegate void Delegate_OnDraw(SpriteBatch spriteBatch);
         public delegate void Delegate_OnUpdate(GameTime gameTime);
+        public delegate void Delegate_OnLoadContent(Game game);
 
         public Delegate_OnDraw OnDraw;
         public Delegate_OnUpdate OnUpdate;
+        public Delegate_OnLoadContent OnLoad;
 
-        public GameRoot()
+        public GameRoot(Platform platform)
         {
             Instance = this;
+            CurrentPlatform = platform;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
         }
 
         /// <summary>
@@ -42,8 +51,28 @@ namespace Symbiot.Portable.Source
         /// </summary>
         protected override void Initialize()
         {
+            if (CurrentPlatform == Platform.Android || CurrentPlatform == Platform.IOS)
+            {
+                graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
+                graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
+                graphics.IsFullScreen = true;
+            }
+            else
+            {
+                graphics.IsFullScreen = false;
+                graphics.PreferredBackBufferHeight = 1000;
+                graphics.PreferredBackBufferWidth = 1000 * 9 / 16;
+            }
+
+            graphics.ApplyChanges();
+
+            inputController = new InputController();
             uiManager = new UIManager();
             gameController = new GameController();
+
+            
+
+            this.IsMouseVisible = true;
 
             base.Initialize();
         }
@@ -57,6 +86,7 @@ namespace Symbiot.Portable.Source
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            OnLoad(this);
             // TODO: use this.Content to load your game content here
         }
 
@@ -79,7 +109,9 @@ namespace Symbiot.Portable.Source
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            OnUpdate(gameTime)
+            inputController.OnUpdade();
+
+            OnUpdate(gameTime);
 
             base.Update(gameTime);
         }

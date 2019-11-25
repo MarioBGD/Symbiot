@@ -44,11 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Source\Controllers\AreaController.cs" />
+    <Compile Include="Source\Circles\Circle.cs" />
     <Compile Include="Source\Circles\CirclesGenerator.cs" />
     <Compile Include="Source\Circles\CirclesManager.cs" />
-    <Compile Include="Source\Circles\CirclesPainter.cs" />
     <Compile Include="Source\Controllers\CameraController.cs" />
     <Compile Include="Source\Controllers\GameController.cs" />
+    <Compile Include="Source\Controllers\InputController.cs" />
     <Compile Include="Source\GameRoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

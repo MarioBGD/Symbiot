@@ -105,3 +105,4 @@ E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.Android\obj\Debug\50\stamp\_
 E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.Android\obj\Debug\50\stamp\_GenerateJavaStubs.stamp
 E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.Android\obj\Debug\50\stamp\_GeneratePackageManagerJava.stamp
 E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.Android\obj\Debug\50\stamp\_ResolveLibraryProjectImports.stamp
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.Android\bin\Android\AnyCPU\Debug\Symbiot.Portable.dll.mdb

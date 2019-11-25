@@ -39,3 +39,5 @@ E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.cspr
 E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.csproj.CopyComplete
 E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.exe
 E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\obj\Debug\Symbiot.PC.pdb
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Content\Sprites\Game\Circle.xnb
+E:\Visual Studio\Projects\MonoGames\Symbiot\Symbiot.PC\bin\DesktopGL\AnyCPU\Debug\Content\Sprites\Game\area.xnb
