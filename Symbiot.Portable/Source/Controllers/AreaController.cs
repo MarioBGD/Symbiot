@@ -15,16 +15,19 @@ namespace Symbiot.Portable.Source.Controllers
         private const float acceleration = 0.01f; //[m/s]
 
         private static Texture2D AreaCircleTexture;
+        private static AreaController Instance;
         private GameController gameController;
         
-        public float Radius { get; private set; }
+        public static float Radius { get; private set; }
         private float Speed;
-        public Vector2 Position { get; private set; }
+        public static Vector2 Position { get; private set; }
         
 
         public AreaController(GameController gc)
         {
+            Instance = this;
             gameController = gc;
+
             GameRoot.Instance.OnLoad += (Game game) =>
             {
                 AreaCircleTexture = game.Content.Load<Texture2D>("Sprites/Game/Area");
@@ -63,7 +66,7 @@ namespace Symbiot.Portable.Source.Controllers
             Speed += acceleration * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
 
-        public void OnDraw(SpriteBatch spriteBatch)
+        public void OnDraw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             spriteBatch.Draw(AreaCircleTexture, new Rectangle(
                 CameraController.Instance.WorldPosToPixels(Position - new Vector2(Radius, -Radius)),

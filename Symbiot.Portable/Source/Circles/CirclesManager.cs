@@ -88,10 +88,10 @@ namespace Symbiot.Portable.Source.Circles
                 }
         }
 
-        public void OnDraw(SpriteBatch spriteBatch)
+        public void OnDraw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             for (int i = 0; i < EnabledCircles.Count; i++)
-                EnabledCircles[i].OnDraw(spriteBatch);
+                EnabledCircles[i].OnDraw(spriteBatch, gameTime);
         }
 
         public void OnClick(Point point)
@@ -106,7 +106,7 @@ namespace Symbiot.Portable.Source.Circles
                 if (Vector2.Distance(EnabledCircles[i].Position, pos) < Circle.circleRadius * Circle.HitboxMultiplier)
                 {
                     if (EnabledCircles[i].Position.Y > Currentcircle.Position.Y &&
-                        Vector2.Distance(EnabledCircles[i].Position, areaController.Position) < areaController.Radius + Circle.circleRadius)
+                        Vector2.Distance(EnabledCircles[i].Position, AreaController.Position) < AreaController.Radius + Circle.circleRadius)
                         CircleClicked(EnabledCircles[i]);
                     break;
                 }

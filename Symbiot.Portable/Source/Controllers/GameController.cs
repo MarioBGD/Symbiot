@@ -34,9 +34,9 @@ namespace Symbiot.Portable.Source.Controllers
             areaController.Stop();
         }
 
-        public void OnDraw(SpriteBatch spriteBatch)
+        public void OnDraw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            circlesManager.OnDraw(spriteBatch);
+            circlesManager.OnDraw(spriteBatch, gameTime);
         }
     }
 }

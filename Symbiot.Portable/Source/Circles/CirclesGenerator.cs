@@ -12,8 +12,8 @@ namespace Symbiot.Portable.Source.Circles
     public class CirclesGenerator
     {
         private readonly Vector2 field = new Vector2(25, 25);
-        private const int k = 10;
-        private float r = 3.6f;
+        private const int k = 12;
+        private float r = 4f;
 
 
         //for generate cycle

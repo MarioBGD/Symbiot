@@ -26,7 +26,7 @@ namespace Symbiot.Portable.Source
         private UIManager uiManager;
         private GameController gameController;
 
-        public delegate void Delegate_OnDraw(SpriteBatch spriteBatch);
+        public delegate void Delegate_OnDraw(SpriteBatch spriteBatch, GameTime gameTime);
         public delegate void Delegate_OnUpdate(GameTime gameTime);
         public delegate void Delegate_OnLoadContent(Game game);
 
@@ -125,7 +125,7 @@ namespace Symbiot.Portable.Source
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
-            OnDraw(spriteBatch);
+            OnDraw(spriteBatch, gameTime);
             uiManager.OnDraw(spriteBatch);
             spriteBatch.End();
 
