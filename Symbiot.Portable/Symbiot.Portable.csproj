@@ -49,6 +49,8 @@
     <Compile Include="Source\Circles\CirclesGenerator.cs" />
     <Compile Include="Source\Circles\CirclesManager.cs" />
     <Compile Include="Source\Controllers\CameraController.cs" />
+    <Compile Include="Source\Effects\Effect.cs" />
+    <Compile Include="Source\Effects\EffectsController.cs" />
     <Compile Include="Source\Controllers\GameController.cs" />
     <Compile Include="Source\Controllers\InputController.cs" />
     <Compile Include="Source\GameRoot.cs" />

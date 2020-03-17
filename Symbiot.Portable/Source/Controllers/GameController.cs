@@ -20,6 +20,7 @@ namespace Symbiot.Portable.Source.Controllers
             cameraController = new CameraController();
             areaController = new AreaController(this);
             circlesManager = new CirclesManager(areaController);
+            //StartGame();
         }
 
         public void StartGame()

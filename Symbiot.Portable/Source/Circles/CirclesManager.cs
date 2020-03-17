@@ -19,7 +19,7 @@ namespace Symbiot.Portable.Source.Circles
         public List<Circle> DisabledCircles = new List<Circle>();
 
         private bool Generating = true;
-        private Circle Currentcircle;
+        private Circle CurrentCircle;
 
         public CirclesManager(AreaController ac)
         {
@@ -48,33 +48,21 @@ namespace Symbiot.Portable.Source.Circles
                 DisabledCircles.Add(c);
             EnabledCircles.Clear();
 
-            Currentcircle = generator.GenerateCircle(CameraController.Instance.Position, ref DisabledCircles);
-            EnabledCircles.Add(Currentcircle);
-            areaController.Start(Currentcircle.Position);
+            generator.GenerateCircles(ref EnabledCircles, ref DisabledCircles, 7);
+            CurrentCircle = generator.GetFromGrid(new Point(0));
+            Vector2 a = CurrentCircle.Position;
+
+            areaController.Start(CurrentCircle.Position);
 
             GameRoot.Instance.OnUpdate += OnUpdate;
         }
 
         public void OnUpdate(GameTime gameTime)
         {
-            if (generator.Finished)
+            if (CirclesGenerator.PosToIndex(new Vector2(0, CameraController.Instance.TopRenderBorder)).Y > generator.lastGeneratedIndex)
             {
-                generator.BeginGenerating(ref EnabledCircles);
-
+                generator.GenerateCircles(ref EnabledCircles, ref DisabledCircles, 7);
             }
-            else
-            {
-                Circle c = generator.GenerateCircle(ref EnabledCircles, ref DisabledCircles);
-                if (c != null) EnabledCircles.Add(c);
-
-                if (!generator.Finished)
-                {
-                    c = generator.GenerateCircle(ref EnabledCircles, ref DisabledCircles);
-                    if (c != null) EnabledCircles.Add(c);
-                }
-            }
-
-            CleanUslessCircle();
         }
 
         private void CleanUslessCircle()
@@ -90,8 +78,16 @@ namespace Symbiot.Portable.Source.Circles
 
         public void OnDraw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            for (int i = 0; i < EnabledCircles.Count; i++)
-                EnabledCircles[i].OnDraw(spriteBatch, gameTime);
+            Point leftBot = CirclesGenerator.PosToIndex(new Vector2(CameraController.Instance.LeftRenderBorder, CameraController.Instance.BotRenderBorder));
+            Point rightTop = CirclesGenerator.PosToIndex(new Vector2(CameraController.Instance.RightRenderBorder, CameraController.Instance.TopRenderBorder));
+
+            for (int x = leftBot.X; x <= rightTop.X; x++)
+                for (int y = leftBot.Y; y <= rightTop.Y; y++)
+                {
+                    Circle c = generator.GetFromGrid(new Point(x, y));
+                    if (c != null)
+                        c.OnDraw(spriteBatch, gameTime, x);
+                }
         }
 
         public void OnClick(Point point)
@@ -99,24 +95,36 @@ namespace Symbiot.Portable.Source.Circles
             if (!Generating)
                 return;
 
-            Debug.WriteLine(point);
-            Vector2 pos = CameraController.Instance.PixelsToWorldPos(point);
+            Vector2 worldPos = CameraController.Instance.PixelsToWorldPos(point);
+            Point index = CirclesGenerator.PosToIndex(worldPos);
 
-            for (int i = 0; i < EnabledCircles.Count; i++)
-                if (Vector2.Distance(EnabledCircles[i].Position, pos) < Circle.circleRadius * Circle.HitboxMultiplier)
+            for (int x = -1; x <= 1; x++)
+            {
+                int ix = index.X + x;
+
+                for (int y = -1; y <= 1; y++)
                 {
-                    if (EnabledCircles[i].Position.Y > Currentcircle.Position.Y &&
-                        Vector2.Distance(EnabledCircles[i].Position, AreaController.Position) < AreaController.Radius + Circle.circleRadius)
-                        CircleClicked(EnabledCircles[i]);
-                    break;
+                    int iy = index.Y + y;
+                    Circle c = generator.GetFromGrid(new Point(ix, iy));
+
+                    if (c == null) continue;
+                    //EnabledCircles[i].Position.Y > CurrentCircle.Position.Y
+                    Vector2 cGlobalPos = c.GlobalPos(ix);
+                    if (Vector2.Distance(cGlobalPos, worldPos) < Circle.circleRadius * Circle.HitboxMultiplier
+                        && Vector2.Distance(cGlobalPos, AreaController.Position) < AreaController.Radius + Circle.circleRadius)
+                    {
+                        CircleClicked(c, cGlobalPos);
+                        break;
+                    }
                 }
+            }
         }
 
-        private void CircleClicked(Circle circle)
+        private void CircleClicked(Circle circle, Vector2 worldPos)
         {
-            Currentcircle = circle;
-            CameraController.Instance.GoTo(circle.Position);
-            areaController.Reset(circle.Position);
+            CurrentCircle = circle;
+            CameraController.Instance.GoTo(worldPos);
+            areaController.Reset(worldPos);
         }
     }
 }

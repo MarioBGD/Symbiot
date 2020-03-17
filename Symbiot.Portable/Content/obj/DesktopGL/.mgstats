@@ -1,3 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"E:/Visual Studio/Projects/MonoGames/Symbiot/Symbiot.Portable/Content/Sprites/Game/area.png","E:/Visual Studio/Projects/MonoGames/Symbiot/Symbiot.Portable/Content/bin/DesktopGL/Sprites/Game/Area.xnb","TextureProcessor","Texture2DContent",20446,1430485,0,1689642
-"E:/Visual Studio/Projects/MonoGames/Symbiot/Symbiot.Portable/Content/Sprites/Game/Circle.png","E:/Visual Studio/Projects/MonoGames/Symbiot/Symbiot.Portable/Content/bin/DesktopGL/Sprites/Game/Circle.xnb","TextureProcessor","Texture2DContent",36233,518485,0,0289913
+"E:/Visual Studio/Projects/MonoGames/Symbiot/Symbiot.Portable/Content/Sprites/Game/Circle.png","E:/Visual Studio/Projects/MonoGames/Symbiot/Symbiot.Portable/Content/bin/DesktopGL/Sprites/Game/Circle.xnb","TextureProcessor","Texture2DContent",34328,518485,0,3609323
